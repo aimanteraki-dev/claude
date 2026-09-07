@@ -1,0 +1,77 @@
+# Brand kit + offer. Fed to Agent 4 (Penulis Iklan) and Agent 5 (Creative QA).
+# Edit here, not in prompts.
+
+company:
+  name: Annems Leadership Solution Sdn Bhd
+  short_name: Annems
+  website: annemsleadership.com
+  positioning: >
+    Firma organizational development & leadership training untuk founder dan
+    syarikat yang dah ada saiz, tapi masih bergantung pada satu orang.
+
+brand:
+  colors:
+    primary: "navy (#0B1F3A)"
+    accent: "gold (#C9A227)"
+    neutral: "off-white (#F5F3EF)"
+  tone: >
+    Premium corporate. Tenang, berwibawa, matang. Bercakap sebagai orang yang
+    dah duduk dengan ratusan founder — bukan sebagai penjual kursus.
+  language: Bahasa Malaysia (profesional, bukan slanga)
+  avoid:
+    - Hype, tanda seru berlebihan, emoji bertaburan
+    - Janji pendapatan atau jaminan hasil
+    - Bahasa merendahkan pembaca ("anda gagal sebab...")
+    - Klise motivasi ("rahsia yang tiada siapa beritahu anda")
+    - Stok gambar orang bersalaman di pejabat kaca
+
+offer:
+  lead_product: Sesi Diagnosis
+  lead_product_desc: >
+    Sesi diagnosis 1-ke-1 untuk founder: kenal pasti di mana bisnes bergantung
+    pada founder dan apa yang menghalang ia berkembang tanpa dia.
+  flagship: BSS Program (Business Sustainability Solution)
+  flagship_desc: >
+    Program 5 bulan untuk founder syarikat RM2M+ revenue — bina struktur,
+    sistem dan barisan kedua supaya bisnes boleh jalan tanpa founder.
+  cta_default: "Tempah Sesi Diagnosis"
+
+audience:
+  who: Founder / pemilik syarikat SME Malaysia
+  revenue: RM2 juta+ setahun
+  staff: 5 orang ke atas
+  pain:
+    - Semua keputusan tersekat pada founder
+    - Untung nampak atas kertas, cash flow ketat
+    - Bisnes membesar tapi sistem tak membesar sama
+    - Tak boleh cuti tanpa bisnes terganggu
+    - Team tak ambil ownership
+
+# Vocabulary — MUST match the manual Tagging Log (docs/Creative_Tagging_Log_Annems.xlsx,
+# sheet "Konsep & Angle"). Consistent naming today = a usable Learning Memory later.
+concepts:
+  Founder Trap:
+    - Semua keputusan tunggu founder
+    - Team tak boleh decide tanpa kau
+    - Cuba hilang 2 minggu — apa jadi?
+  Hidden Leakage:
+    - Untung nampak, cash tak ada
+  Structure Chaos:
+    - Bisnes besar, sistem kecil
+  CEO Shift:
+    - Dari operator kepada CEO
+  Absence Test:
+    - Bisnes kau lulus ujian ketiadaan kau?
+
+formats:
+  - Static 4:5
+  - Carousel
+  - Video 9:16
+  - Video 4:5
+
+awareness_levels:
+  - Unaware
+  - Problem Aware
+  - Solution Aware
+  - Product Aware
+  - Most Aware

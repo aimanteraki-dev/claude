@@ -1,0 +1,53 @@
+# Single config file for all alert thresholds (CLAUDE.md, Agent 3 spec).
+# Tune these here — never hardcode a threshold anywhere else in the codebase.
+
+monitoring:
+  # Only alert during ad-serving hours, local time (Asia/Kuala_Lumpur), 24h clock.
+  active_hours_start: 8
+  active_hours_end: 23
+  # Do not re-send the same rule for the same ref within this window.
+  cooldown_hours: 6
+
+rules:
+  spend_no_leads:
+    enabled: true
+    severity: critical
+    # Spend more than this today with zero leads -> alert.
+    min_spend_rm: 100.0
+
+  cpl_spike:
+    enabled: true
+    severity: warn
+    # CPL above this multiple of the 7-day baseline -> alert.
+    multiple_of_baseline: 1.5
+    # Ignore refs with too little spend to be meaningful.
+    min_spend_rm: 50.0
+
+  ctr_drop:
+    enabled: true
+    severity: warn
+    # CTR down by more than this percent vs 7-day baseline -> creative fatigue.
+    drop_pct: 30.0
+    min_impressions: 1000
+
+  frequency_high:
+    enabled: true
+    severity: warn
+    # Audience saturation signal.
+    max_frequency: 3.0
+    min_impressions: 1000
+
+  pull_failure:
+    enabled: true
+    severity: critical
+
+# Minimum data before the analyst/monitor is allowed to draw conclusions.
+data_quality:
+  min_days_for_baseline: 4
+  min_impressions_for_ctr: 500
+  min_leads_for_cpl: 3
+
+reporting:
+  # Levels included in the morning report.
+  report_level: ad
+  top_n_ads: 3
