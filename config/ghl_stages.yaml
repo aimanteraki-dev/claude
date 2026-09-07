@@ -1,0 +1,39 @@
+# Maps GoHighLevel pipeline stage names -> the five canonical stages the system
+# understands. Edit the right-hand lists to match how the GHL pipeline is
+# actually named — matching is case-insensitive and ignores extra spaces.
+#
+# WARNING: CPQL depends entirely on this mapping being correct. A lead sitting
+# in a stage that is not listed here counts as "new", which quietly inflates
+# CPQL. Review this file whenever the GHL pipeline is renamed.
+
+new:
+  - new lead
+  - new
+  - lead masuk
+  - baru
+
+qualified:
+  - qualified
+  - layak
+  - lead berkualiti
+  - discovery done
+
+appointment:
+  - appointment
+  - appointment booked
+  - temujanji
+  - sesi diagnosis booked
+  - diagnosis scheduled
+
+closed_won:
+  - closed won
+  - won
+  - client
+  - bss enrolled
+  - berjaya
+
+closed_lost:
+  - closed lost
+  - lost
+  - not interested
+  - gagal
