@@ -1,0 +1,33 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+          pip install -e . --no-deps
+
+      # No secrets are configured for this job, and none are needed: the suite
+      # touches no network and no database by design. If a test ever starts
+      # needing a key, that test is testing the wrong thing.
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Verify the CLI loads
+        run: python -m annems --help
